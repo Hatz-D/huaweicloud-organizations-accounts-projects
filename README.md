@@ -4,9 +4,9 @@ This repository addresses the steps necessary to automatically list all the ente
 ## Context
 In Huawei Cloud, it is possible to an organization in order to manage multiple child accounts under the same root account, as shown in the example below:
 
-<img src="https://github.com/user-attachments/assets/3754ec47-c92c-41b0-8307-2f502f0a16fc">
+<img src="https://github.com/user-attachments/assets/3754ec47-c92c-41b0-8307-2f502f0a16fc" width=400>
 
-However, how to list all the enterprise projects of the child accounts automatically? 
+<p>However, how to list all the enterprise projects of the child accounts automatically?</p>
 
 ## 1. Dependencies
 In order to use Huawei Cloud SDK, it is first necessary to download the dependencies. More information can be found on the original GitHub repository: <a href="https://github.com/huaweicloud/huaweicloud-sdk-python-v3">SDK Repo</a>. Besides that, it is also necessary to install <a href="https://pandas.pydata.org/docs/getting_started/install.html">Pandas</a>.
