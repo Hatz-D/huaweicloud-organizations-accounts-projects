@@ -2,7 +2,7 @@
 This repository addresses the steps necessary to automatically list all the enterprise projects of the child accounts of an organization on Huawei Cloud using Python HWC SDK
 
 ## Context
-In Huawei Cloud, it is possible to an organization in order to manage multiple child accounts under the same root account, as shown in the example below:
+In Huawei Cloud, it is possible to create an organization in order to manage multiple child accounts under the same root account for governance purposes, as shown in the example below:
 
 <img src="https://github.com/user-attachments/assets/3754ec47-c92c-41b0-8307-2f502f0a16fc" width=400>
 
