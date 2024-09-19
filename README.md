@@ -17,7 +17,7 @@ In order to delegate access to the Huawei account through the SDK, it is necessa
 <p><code>export HUAWEISDK_SK={insert_your_sk_here}</code></p>
 
 ## 3. Configure the agencies file
-In order to delegate access permission from one Huawei Cloud account to another, it is necessary to create agencies. Create an agency on all child accounts or use an existing agency that the organization management account have permissions that have been delegated to. After that, edit the <code>agenciesList</code> file to add the name of all the agencies created on the child accounts.
+In order to delegate access permission from one Huawei Cloud account to another, it is necessary to create agencies. Create an agency on all child accounts or use an existing agency that the organization management account have permissions over. After that, edit the <code>agenciesList</code> file to add the name of all the agencies created on the child accounts.
 
 ## 4. Run the script
 In order to run the script, type <code>python3 projects.py agenciesList</code>. A CSV file called <code>projects.csv</code> will be generated containing all of the enterprise projects of the child accounts.
