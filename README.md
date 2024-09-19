@@ -9,7 +9,7 @@ In Huawei Cloud, it is possible to an organization in order to manage multiple c
 However, how to list all the enterprise projects of the child accounts automatically? 
 
 ## 1. Dependencies
-In order to use Huawei Cloud SDK, it is necessary to download the dependencies. More information can be found on the original GitHub repository: <a href="https://github.com/huaweicloud/huaweicloud-sdk-python-v3" GitHub Repository>
+In order to use Huawei Cloud SDK, it is first necessary to download the dependencies. More information can be found on the original GitHub repository: <a href="https://github.com/huaweicloud/huaweicloud-sdk-python-v3" GitHub Repository>. Besides that, it is also necessary to install <code>Pandas</code>.
 
 ## 2. Authentication
 In order to delegate access to the Huawei account through the SDK, it is necessary to generate a AK/SK pair on Huawei Cloud console. After that, import the AK/SK as environment variables on the OS running the script, as shown below:
@@ -17,7 +17,7 @@ In order to delegate access to the Huawei account through the SDK, it is necessa
 <code>export HUAWEISDK_SK={insert_your_sk_here}</code>
 
 ## 3. Configure the agencies file
-In order to delegate access permission from one Huawei Cloud account to another, it is possible to create agencies. Create an agency on all child accounts or use an existing agency.
+In order to delegate access permission from one Huawei Cloud account to another, it is necessary to create agencies. Create an agency on all child accounts or use an existing agency that the organization management account have permissions that have been delegated to. After that, edit the <code>agenciesList</code> file to add the name of all the agencies created on the child accounts.
 
 ## 4. Run the script
-In order to run the script, type <code>python3 script.py agenciesFile</code>
+In order to run the script, type <code>python3 projects.py agenciesList</code>. A CSV file called <code>projects.csv</code> will be generated containing all of the enterprise projects of the child accounts.
