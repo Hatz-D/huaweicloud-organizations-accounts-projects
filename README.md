@@ -9,7 +9,7 @@ In Huawei Cloud, it is possible to an organization in order to manage multiple c
 However, how to list all the enterprise projects of the child accounts automatically? 
 
 ## 1. Dependencies
-In order to use Huawei Cloud SDK, it is first necessary to download the dependencies. More information can be found on the original GitHub repository: <a href="https://github.com/huaweicloud/huaweicloud-sdk-python-v3" GitHub Repository></a>. Besides that, it is also necessary to install <code>Pandas</code>.
+In order to use Huawei Cloud SDK, it is first necessary to download the dependencies. More information can be found on the original GitHub repository: <a href="https://github.com/huaweicloud/huaweicloud-sdk-python-v3">GitHub Repository</a>. Besides that, it is also necessary to install <code>Pandas</code>.
 
 ## 2. Authentication
 In order to delegate access to the Huawei account through the SDK, it is necessary to generate a AK/SK pair on Huawei Cloud console. After that, import the AK/SK as environment variables on the OS running the script, as shown below:
