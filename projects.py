@@ -2,7 +2,7 @@ import os
 import sys
 import json
 import requests
-import pandas as pd
+import csv
 
 from huaweicloudsdkcore.auth.credentials import GlobalCredentials
 from huaweicloudsdkiam.v3 import *
@@ -14,12 +14,11 @@ from huaweicloudsdkorganizations.v1.region.organizations_region import Organizat
 
 def main(file_path):
     # Initializing the Pandas dataframe with the 'account' and 'project_id' columns
-    data = {
-        "Account":[],
-        "Project_id":[]
-    }
 
-    df = pd.DataFrame(data)
+    with open("projects.csv", mode='w', newline='') as df:
+        writer = csv.writer(df)
+        writer.writerow(["Account", "Project_id"])
+
     childAccounts = []
     rootAccount = ""
 
@@ -91,9 +90,10 @@ def main(file_path):
 
                 # Append each enterprise project of the [i] child account to the dataframe
                 for project in projects_list:
-                    new_line = {"Account":childAccounts[i], "Project_id":project["name"]}
-                    df = df._append(new_line, ignore_index=True)
-    
+                    with open("projects.csv", mode='a', newline='') as df:
+                        writer = csv.writer(df)
+                        writer.writerow([childAccounts[i], project["name"]])
+                        
                 # If the API is successful, skip the remaining agencies provided in the list
                 break
 
@@ -103,7 +103,6 @@ def main(file_path):
                     print("Account: {} failed to be accessed by all agencies provided!".format(childAccounts[i]))
 
     # Save the dataframe to a csv file
-    df.to_csv("projects.csv", index=False)
     print("\nFile saved successfully! File name: 'projects.csv'")
 
 
